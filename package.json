@@ -6,6 +6,7 @@
     "start": "node dist/main.js",
     "start:dev": "ts-node-dev --respawn --transpile-only src/main.ts",
     "build": "tsc -p tsconfig.build.json",
+    "build:lambda": "tsc -p tsconfig.build.json && cd infra && zip -r ../lambda.zip ../dist ../node_modules",
     "lint": "echo 'no linter configured'",
     "test": "echo \"No tests configured\""
   },
